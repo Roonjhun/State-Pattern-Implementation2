@@ -28,27 +28,37 @@ public class StateMachineContext {
 	}
 
 	public void Opertaion4() throws Exception {
-		currentState.CurrentStatesRegion[0].Opertaion4(this);
+		if (currentState instanceof State3)
+			currentState.CurrentStatesRegion[0].Opertaion4(this);
+		else
+			throw new Exception("not Allowed");
 	}
 
 	public void Operation5() throws Exception {
-		if (currentState.CurrentStatesRegion[1] == null) {
-			throw new Exception("Final State achieved for lower region.");
-		}
-		else
-		currentState.CurrentStatesRegion[1].Operation5(this);
+		if (currentState instanceof State3) {
+			if (currentState.CurrentStatesRegion[1] == null) {
+				throw new Exception("Final State achieved for lower region.");
+			} else
+				currentState.CurrentStatesRegion[1].Operation5(this);
+		} else
+			throw new Exception("not Allowed");
 	}
 
 	public void Operation6() throws Exception {
-		currentState.CurrentStatesRegion[0].Operation6(this);
+		if (currentState instanceof State3)
+			currentState.CurrentStatesRegion[0].Operation6(this);
+		else
+			throw new Exception("not Allowed");
 	}
 
 	public void Operation7() throws Exception {
-		if (currentState.CurrentStatesRegion[1] == null) {
-			throw new Exception("Final State achieved for lower region.");
-		}
-		else
-		currentState.CurrentStatesRegion[1].Operation7(this);
+		if (currentState instanceof State3) {
+			if (currentState.CurrentStatesRegion[1] == null) {
+				throw new Exception("Final State achieved for lower region.");
+			} else
+				currentState.CurrentStatesRegion[1].Operation7(this);
+		} else
+			throw new Exception("not Allowed");
 	}
 
 	public void OperationExit() throws Exception {
