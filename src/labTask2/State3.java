@@ -16,6 +16,7 @@ public class State3 extends State {
 			CurrentStatesRegion[0] = new State4_2().enter(context); // When there is no history then default history is
 																// considered.
 		}
+		// final state of lower region achieved
 		if(context.getCurrentState().CurrentStatesRegion[1] == null)
 		{
 			System.out.println("Final state of lower region is achieved. ");
