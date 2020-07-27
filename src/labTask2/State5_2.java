@@ -8,7 +8,6 @@ public class State5_2 extends State3 {
 	}
 	
 	public void Operation7(StateMachineContext context) throws Exception{
-		history = null;
 		System.out.println("Final state of Region 2 reached.");
 	}
 }
